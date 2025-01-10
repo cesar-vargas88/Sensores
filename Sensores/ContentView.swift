@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "sensor")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hola, sensores!")
+        
+        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+            Text("Accelerometer").tabItem {
+                Image(systemName: "speedometer")
+            }
+            Text("Gyroscope").tabItem {
+                Image(systemName: "gyroscope")
+            }
+            Text("Barometer").tabItem {
+                Image(systemName: "barometer")
+            }
         }
-        .padding()
     }
 }
 
